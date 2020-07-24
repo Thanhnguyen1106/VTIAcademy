@@ -57,14 +57,17 @@ FROM Student
 JOIN StudentSubject USING(RN);
 
 UPDATE STUDENT 
-SET GENDER 
+SET GENDER ;
 
 
 
-DROP TRIGGER IF EXISTS `Subject`
- 
+DROP TRIGGER IF EXISTS `CasSubject`;
+DELIMITER  $$
+CREATE TRIGGER `Subject`
+before insert on S_ID
 
-
+FOR EACH ROW
+BEGIN
 
  
 
